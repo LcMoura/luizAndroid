@@ -1,2 +1,2 @@
 # luizAndroid
-Repositório criado para a disciplina de Desenvolvimento Android
+Repositório criado para a disciplina de Desenvolvimento Android e WEB
