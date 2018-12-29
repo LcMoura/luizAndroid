@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/Txv_Widget"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/android_jogos" />
+
+    <Button
+        android:id="@+id/btn_ListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="9dp"
+        android:background="@android:color/background_light"
+        android:text="ListView"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ImageView"
+        app:layout_constraintEnd_toStartOf="@+id/btn_WebView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_WebView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="1dp"
+        android:background="@android:color/background_light"
+        android:text="WebView"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btn_DataPicker"
+        app:layout_constraintStart_toEndOf="@+id/btn_ListView"
+        app:layout_constraintTop_toTopOf="@+id/btn_DataPicker" />
+
+    <Button
+        android:id="@+id/btn_DataPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="149dp"
+        android:background="@android:color/background_light"
+        android:text="DataPicker"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_WebView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_ImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:text="ImageView"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_WebView"
+        app:layout_constraintStart_toStartOf="@+id/btn_ListView"
+        app:layout_constraintTop_toBottomOf="@+id/btn_WebView" />
+
+    <Button
+        android:id="@+id/btn_EditView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:text="EditView"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_WebView"
+        app:layout_constraintStart_toStartOf="@+id/btn_DataPicker"
+        app:layout_constraintTop_toBottomOf="@+id/btn_WebView" />
+
+    <TextView
+        android:id="@+id/Txv_Widget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="14dp"
+        android:text="Widgets"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ListView"
+        app:layout_constraintStart_toEndOf="@+id/btn_ListView" />
+
+</android.support.constraint.ConstraintLayout>

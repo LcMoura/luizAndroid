@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Atividade Android</string>
+
+    <string-array name="produtos">
+        <item>Notebook</item>
+        <item>Desktop</item>
+        <item>Mouse Gamer</item>
+        <item>Teclado Gamer</item>
+        <item>Monitor Gamer</item>
+        <item>Headset Gamer</item>
+        <item>NoBreak</item>
+        <item>Estabilizador</item>
+        <item>Carregador de Notebook</item>
+        <item>SSD</item>
+        <item>Memória RAM DDR3</item>
+    </string-array>
+
+</resources>
