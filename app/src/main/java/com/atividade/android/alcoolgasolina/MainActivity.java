@@ -1,5 +1,6 @@
 package com.atividade.android.alcoolgasolina;
 
+        import android.content.Intent;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
         import android.view.View;
@@ -9,12 +10,19 @@ package com.atividade.android.alcoolgasolina;
 
 public class MainActivity extends AppCompatActivity {
 
-
     // Declarar as variáveis
     private EditText precoAlcool;
     private EditText precoGasolina;
     private Button btnCalcular;
     private TextView informaResultado;
+    private Button btnProximo;
+
+    //Método para armazenar o resultado ao rotacionar
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("Resultado", informaResultado.getText().toString());
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +34,13 @@ public class MainActivity extends AppCompatActivity {
     precoGasolina = findViewById(R.id.editTextPrecoGasolina);
     btnCalcular = findViewById(R.id.buttonCalcular);
     informaResultado = findViewById(R.id.textViewResutado);
+    btnProximo = findViewById(R.id.buttonProximo);
+
+    //Validar o armazenamento ao rotacionar a tela
+    if (savedInstanceState != null){
+        String melhorEscolha = savedInstanceState.getString("Resultado");
+        informaResultado.setText(melhorEscolha);
+    }
 
     btnCalcular.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -48,9 +63,16 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-
-
     });
 
-    }
+    btnProximo.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent i = new Intent(getApplicationContext(), SegundaActivity.class);
+            i.putExtra("nome", "Luiz Carlos");
+            i.putExtra("qtdTurmas", 3);
+            startActivity(i);
+        }
+    });
+}
 }
