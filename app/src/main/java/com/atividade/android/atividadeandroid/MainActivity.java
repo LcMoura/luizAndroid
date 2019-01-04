@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     //Declarar variável
     private Button btnListView;
     private Button btnWebView;
+    private Button btnDatePicker;
 
     //Primeiro Ciclo de Vida de um app Android
     @Override
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         //Recuperar os itens (Buttons)
         btnListView  = findViewById(R.id.btn_ListView);
         btnWebView = findViewById(R.id.btn_WebView);
+        btnDatePicker = findViewById(R.id.btn_DataPicker);
 
         //BOTÃO ListView
         //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
@@ -38,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), WebViewActivity.class);
+                startActivity(i);
+            }
+        });
+
+        //BOTÃO DatePicker
+        //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
+        btnDatePicker.setOnClickListener (new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), CalendarViewActivity.class);
                 startActivity(i);
             }
         });
