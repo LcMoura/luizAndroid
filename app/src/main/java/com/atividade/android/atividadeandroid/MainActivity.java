@@ -14,6 +14,10 @@ public class MainActivity extends AppCompatActivity {
     private Button btnDatePicker;
     private Button btnImageView;
     private Button btnEditView;
+    private Button btnFrameLayout;
+    private Button btnRelativeLayout;
+    private Button btnLinearLayout;
+    private Button btnTableLayout;
 
     //Primeiro Ciclo de Vida de um app Android
     @Override
@@ -27,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
         btnDatePicker = findViewById(R.id.btn_DataPicker);
         btnImageView = findViewById(R.id.btn_ImageView);
         btnEditView = findViewById(R.id.btn_EditView);
+        btnFrameLayout = findViewById(R.id.btn_frameLayout);
+        btnRelativeLayout = findViewById(R.id.btn_relativeLayout);
+        btnLinearLayout = findViewById(R.id.btn_LinearLayout);
+        btnTableLayout = findViewById(R.id.btn_TableLayout);
 
         //BOTÃO ListView
         //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
@@ -68,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //BOTÃO ListView
+        //BOTÃO EditView
         //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
         btnEditView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,5 +86,44 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //BOTÃO FrameLayout
+        //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
+        btnFrameLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), FrameLayoutActivity.class);
+                startActivity(i);
+            }
+        });
+
+        //BOTÃO RelativeLayout
+        //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
+        btnRelativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), RelativeLayoutActivity.class);
+                startActivity(i);
+            }
+        });
+
+        //BOTÃO LinearLayout
+        //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
+        btnLinearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), LinearLayoutActivity.class);
+                startActivity(i);
+            }
+        });
+
+        //BOTÃO TableLayout
+        //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
+        btnTableLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), TableLayoutActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }

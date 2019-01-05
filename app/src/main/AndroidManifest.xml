@@ -22,7 +22,11 @@
         <activity android:name=".WebViewActivity" />
         <activity android:name=".CalendarViewActivity" />
         <activity android:name=".ImageViewActivity" />
-        <activity android:name=".EditViewActivity"></activity>
+        <activity android:name=".EditViewActivity" />
+        <activity android:name=".FrameLayoutActivity" />
+        <activity android:name=".RelativeLayoutActivity" />
+        <activity android:name=".LinearLayoutActivity" />
+        <activity android:name=".TableLayoutActivity"></activity>
     </application>
 
 </manifest>
