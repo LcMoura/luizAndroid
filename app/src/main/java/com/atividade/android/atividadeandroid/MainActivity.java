@@ -14,10 +14,12 @@ public class MainActivity extends AppCompatActivity {
     private Button btnDatePicker;
     private Button btnImageView;
     private Button btnEditView;
+    private Button btnScrollView;
     private Button btnFrameLayout;
     private Button btnRelativeLayout;
     private Button btnLinearLayout;
     private Button btnTableLayout;
+    private Button btnGridLayout;
 
     //Primeiro Ciclo de Vida de um app Android
     @Override
@@ -31,10 +33,12 @@ public class MainActivity extends AppCompatActivity {
         btnDatePicker = findViewById(R.id.btn_DataPicker);
         btnImageView = findViewById(R.id.btn_ImageView);
         btnEditView = findViewById(R.id.btn_EditView);
+        btnScrollView = findViewById(R.id.btn_ScrollView);
         btnFrameLayout = findViewById(R.id.btn_frameLayout);
         btnRelativeLayout = findViewById(R.id.btn_relativeLayout);
         btnLinearLayout = findViewById(R.id.btn_LinearLayout);
         btnTableLayout = findViewById(R.id.btn_TableLayout);
+        btnGridLayout = findViewById(R.id.btn_GridLayout);
 
         //BOTÃO ListView
         //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
@@ -125,5 +129,26 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        //BOTÃO GridLayout
+        //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
+        btnGridLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), GridLayoutActivity.class);
+                startActivity(i);
+            }
+        });
+
+        //BOTÃO ScrollView
+        //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
+        btnScrollView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ScrollViewActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
 }

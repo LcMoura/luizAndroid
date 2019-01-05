@@ -12,40 +12,49 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="67dp"
-        android:layout_height="67dp"
-        app:srcCompat="@drawable/android_jogos"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="6dp" />
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/Txv_Widget"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/android_jogos" />
 
     <Button
         android:id="@+id/btn_ListView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
         android:background="@android:color/background_light"
         android:text="ListView"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="268dp"
-        tools:layout_editor_absoluteY="124dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_ImageView"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ImageView"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_WebView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:background="@android:color/background_light"
         android:text="WebView"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="268dp"
-        tools:layout_editor_absoluteY="245dp" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_DataPicker"
+        app:layout_constraintStart_toEndOf="@+id/btn_ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/Txv_Widget" />
 
     <Button
         android:id="@+id/btn_DataPicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
         android:background="@android:color/background_light"
         android:text="DataPicker"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="268dp"
-        tools:layout_editor_absoluteY="307dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_WebView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_WebView" />
 
     <Button
         android:id="@+id/btn_ImageView"
@@ -54,67 +63,115 @@
         android:background="@android:color/background_light"
         android:text="ImageView"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="268dp"
-        tools:layout_editor_absoluteY="188dp" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_WebView"
+        app:layout_constraintStart_toEndOf="@+id/btn_ListView"
+        app:layout_constraintTop_toTopOf="@+id/btn_WebView" />
 
     <Button
         android:id="@+id/btn_frameLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:background="@android:color/background_light"
         android:text="FrameLayout"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="163dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_GridLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_GridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/background_light"
+        android:text="GridLayout"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/btn_relativeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/btn_relativeLayout" />
 
     <Button
         android:id="@+id/btn_relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="3dp"
         android:background="@android:color/background_light"
         android:text="RelativeLayout"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="220dp" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_LinearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/txv_Layouts" />
 
     <Button
         android:id="@+id/btn_LinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
         android:background="@android:color/background_light"
         android:text="LinearLayout"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="279dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btn_WebView" />
 
     <Button
         android:id="@+id/btn_TableLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:background="@android:color/background_light"
         android:text="TableLayout"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="335dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_relativeLayout"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_EditView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
         android:background="@android:color/background_light"
         android:text="EditView"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="268dp"
-        tools:layout_editor_absoluteY="371dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_ScrollView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_ScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/background_light"
+        android:text="ScrollView"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/btn_ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ImageView" />
 
     <TextView
         android:id="@+id/Txv_Widget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="73dp"
         android:text="Widgets"
         android:textSize="25dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="73dp" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_ImageView"
+        app:layout_constraintStart_toEndOf="@+id/btn_ImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txv_Layouts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="44dp"
+        android:text="Layouts"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btn_DataPicker"
+        app:layout_constraintStart_toEndOf="@+id/btn_frameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ScrollView" />
 
 </android.support.constraint.ConstraintLayout>
