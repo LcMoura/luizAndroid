@@ -8,4 +8,30 @@
     android:padding="16dp"
     android:stretchColumns="1,2">
 
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome:"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/txvAviso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avisos por:"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefone"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"/>
+    </TableRow>
 </TableLayout>
