@@ -36,11 +36,11 @@
         android:id="@+id/btn_WebView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginEnd="4dp"
         android:background="@android:color/background_light"
         android:text="WebView"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/btn_ImageView"
+        app:layout_constraintEnd_toStartOf="@+id/btn_DataPicker"
         app:layout_constraintTop_toTopOf="@+id/btn_ImageView" />
 
     <Button
@@ -58,12 +58,12 @@
         android:id="@+id/btn_ImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
         android:layout_marginTop="31dp"
-        android:layout_marginEnd="2dp"
         android:background="@android:color/background_light"
         android:text="ImageView"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/btn_ScrollView"
+        app:layout_constraintStart_toEndOf="@+id/btn_ListView"
         app:layout_constraintTop_toBottomOf="@+id/Txv_Widget" />
 
     <Button
@@ -94,22 +94,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:layout_marginEnd="4dp"
         android:background="@android:color/background_light"
         android:text="RelativeLayout"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/btn_frameLayout"
+        app:layout_constraintEnd_toStartOf="@+id/btn_LinearLayout"
         app:layout_constraintTop_toBottomOf="@+id/txv_Layouts" />
 
     <Button
         android:id="@+id/btn_LinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="41dp"
         android:background="@android:color/background_light"
         android:text="LinearLayout"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn_relativeLayout"
-        app:layout_constraintStart_toEndOf="@+id/btn_relativeLayout" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_DataPicker"
+        app:layout_constraintStart_toEndOf="@+id/btn_ScrollView" />
 
     <Button
         android:id="@+id/btn_TableLayout"
@@ -150,13 +153,40 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="23dp"
+        android:layout_marginEnd="9dp"
         android:background="@android:color/background_light"
         android:text="Compartilhar"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/txv_Native"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_Telefone"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Telefone"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Telefone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="21dp"
+        android:background="@android:color/background_light"
+        android:text="Phone"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btn_relativeLayout"
+        app:layout_constraintStart_toStartOf="@+id/btn_GridLayout"
+        app:layout_constraintTop_toBottomOf="@+id/txv_Native" />
+
+    <Button
+        android:id="@+id/btn_CameraMenu"
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="88dp"
+        android:background="@android:color/background_light"
+        android:text="Câmera"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btn_Telefone"
         app:layout_constraintTop_toBottomOf="@+id/txv_Native" />
 
     <TextView
@@ -175,26 +205,24 @@
         android:id="@+id/txv_Layouts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="139dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="138dp"
         android:text="Layouts"
         android:textSize="25dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/btn_DataPicker"
-        app:layout_constraintStart_toStartOf="@+id/btn_EditView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_ScrollView" />
 
     <TextView
         android:id="@+id/txv_Native"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="8dp"
         android:text="Native"
         android:textSize="25dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/btn_GridLayout"
+        app:layout_constraintStart_toStartOf="@+id/btn_Telefone"
         app:layout_constraintTop_toBottomOf="@+id/btn_GridLayout" />
 
 </android.support.constraint.ConstraintLayout>

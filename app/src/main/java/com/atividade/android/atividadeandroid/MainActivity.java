@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btnGridLayout;
     //Native
     private Button btnShareIt;
+    private Button btnTelefone;
+    private Button btnCameraMain;
 
     //Primeiro Ciclo de Vida de um app Android
     @Override
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         btnGridLayout = findViewById(R.id.btn_GridLayout);
         //Native
         btnShareIt = findViewById(R.id.btn_Compartilhar1);
+        btnTelefone = findViewById(R.id.btn_Telefone);
+        btnCameraMain = findViewById(R.id.btn_CameraMenu);
 
         //BOTÃO ListView
         //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
@@ -168,6 +172,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //BOTÃO Telefone
+        //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
+        btnTelefone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), LigacaoActivity.class);
+                startActivity(i);
+            }
+        });
+
+        //BOTÃO Telefone
+        //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
+        btnCameraMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), CameraActivity.class);
+                startActivity(i);
+            }
+        });
 
     }
 }

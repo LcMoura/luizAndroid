@@ -3,6 +3,7 @@
     package="com.atividade.android.atividadeandroid">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -29,7 +30,9 @@
         <activity android:name=".TableLayoutActivity" />
         <activity android:name=".GridLayoutActivity" />
         <activity android:name=".ScrollViewActivity" />
-        <activity android:name=".ShareItActivity"></activity>
+        <activity android:name=".ShareItActivity" />
+        <activity android:name=".LigacaoActivity" />
+        <activity android:name=".CameraActivity"></activity>
     </application>
 
 </manifest>
