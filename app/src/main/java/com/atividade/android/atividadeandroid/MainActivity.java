@@ -9,17 +9,21 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     //Declarar variável
+    //Widgets
     private Button btnListView;
     private Button btnWebView;
     private Button btnDatePicker;
     private Button btnImageView;
     private Button btnEditView;
+    //Layouts
     private Button btnScrollView;
     private Button btnFrameLayout;
     private Button btnRelativeLayout;
     private Button btnLinearLayout;
     private Button btnTableLayout;
     private Button btnGridLayout;
+    //Native
+    private Button btnShareIt;
 
     //Primeiro Ciclo de Vida de um app Android
     @Override
@@ -28,17 +32,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Recuperar os itens (Buttons)
+        //Widgets
         btnListView  = findViewById(R.id.btn_ListView);
         btnWebView = findViewById(R.id.btn_WebView);
         btnDatePicker = findViewById(R.id.btn_DataPicker);
         btnImageView = findViewById(R.id.btn_ImageView);
         btnEditView = findViewById(R.id.btn_EditView);
+        //Layouts
         btnScrollView = findViewById(R.id.btn_ScrollView);
         btnFrameLayout = findViewById(R.id.btn_frameLayout);
         btnRelativeLayout = findViewById(R.id.btn_relativeLayout);
         btnLinearLayout = findViewById(R.id.btn_LinearLayout);
         btnTableLayout = findViewById(R.id.btn_TableLayout);
         btnGridLayout = findViewById(R.id.btn_GridLayout);
+        //Native
+        btnShareIt = findViewById(R.id.btn_Compartilhar1);
 
         //BOTÃO ListView
         //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
@@ -149,6 +157,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        //BOTÃO ShareIt (Compartilhar)
+        //Código para atribuir ação ao botão e abrir uma segunda tela referenciada
+        btnShareIt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ShareItActivity.class);
+                startActivity(i);
+            }
+        });
+
 
     }
 }
